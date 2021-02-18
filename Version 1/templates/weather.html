@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <style>
+        h1 {text-align: center;}
+        h4 {text-align: center;}
+        div {text-align: center;}
+        img {text-align: center;}
+        a {text-align: center;}
+        body {background-color: rgb(230, 50, 44);}
+        .divColor {
+            margin: 0 auto;
+            background-color: rgb(70, 130, 180);
+            width: 375px;
+            display: inline-block;
+        }
+
+        .nav {
+            overflow: hidden;
+            background-color: rgb(51, 51, 51);
+        }
+
+        .nav a {
+            float: left;
+            color: #f0e9e9;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav a:hover {
+            background-color: rgb(221, 221, 221);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="nav">
+        <a href="/Weather/">Home</a>
+    </div>
+    <div>
+        <form action="/Weather/" method = "POST">
+            <p>Month: <input type = "text" name = "Month" /></p>
+            <p>Day: <input type = "text" name = "Day" /></p>
+            <p>Average Temperature: <input type = "text" name = "AveTemp" /></p>
+            <p>Maximum Temperature: <input type = "text" name = "MaxTemp" /></p>
+            <p>Minimum Temperature: <input type = "text" name = "MinTemp" /></p>
+            <p>Wind Direction (0-360): <input type = "text" name = "WindDirect" /></p>
+            <p>Wind Speed: <input type = "text" name = "WindSpeed" /></p>
+            <p><input type = "submit" value = "submit" /></p>
+        </form>
+        {% if weatherPred == 1 %}
+            <br/>
+            <p>It will Rain</p>
+        {% endif %}
+        {% if weatherPred == 0 %}
+            <br/>
+            <p>It will not rain</p>
+        {% endif %}
+    </div>
+</body>
+</html>
