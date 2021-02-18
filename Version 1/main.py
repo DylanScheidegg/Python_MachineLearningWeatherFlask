@@ -2,9 +2,6 @@ from flask import Flask, render_template, request
 from datetime import datetime
 from weather import predictWeather
 
-# https://flask.palletsprojects.com/en/0.12.x/tutorial/templates/
-# https://github.com/alanbanks229/flask_calculator_app/blob/master/calculator.py
-
 app = Flask(__name__)
 
 @app.route('/')
