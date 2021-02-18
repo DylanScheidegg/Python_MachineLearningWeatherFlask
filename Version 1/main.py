@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from datetime import datetime
 from weather import predictWeather
 
 app = Flask(__name__)
